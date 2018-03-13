@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile 按钮图标</title>
+</head>
+
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>按钮图标</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">左边箭头图标</a></p>
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">右边箭头图标</a></p>
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-info ui-btn-icon-bottom">信息</a></p>
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-delete ui-btn-icon-top">删除</a></p>
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-back ui-btn-icon-left">后退</a></p>
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-audio ui-btn-icon-left">扬声器</a></p>
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-lock ui-btn-icon-left">挂锁</a></p>
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-search ui-btn-icon-left">搜索</a></p>
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-alert ui-btn-icon-left">警告</a></p>
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-grid ui-btn-icon-left">网格</a></p>
+        <p><a href="#" data-role="button" class="ui-btn ui-icon-home ui-btn-icon-left">主页</a></p>
+    </div>
+    <div data-role="main" class="ui-content">
+        <h1>定位图标</h1>
+        <p>您也可以规定图标定位在按钮的什么部位：顶部（top）、右侧（right）、底部（bottom）、左侧（left）。</p>
+        <p>请使用 ui-btn-icon 属性来指定位置：</p>
+        <h1>只显示图标</h1>
+        <p>如果你只想显示图标，可以使用 "notext":</p>
+        <p><a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-notext">搜索</a></p>
+        <h1>移除圆圈</h1>
+        <p>默认情况下，所有的图标都有一个灰色的圆圈。如果你不需要它，可以在元素中使用 "ui-nodisc-icon" 类：</p>
+        <p>
+            <a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-left">使用圆圈 (默认)</a>
+            <a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-left ui-nodisc-icon">去掉圆圈</a>
+        </p>
+        <h1>黑色、白色按钮</h1>
+        <p>默认情况下，所有图标都是白色的。 如果需要改变图标颜色为黑色，可以在元素添加 "ui-alt-icon"：</p>
+        <p>
+            <a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-left">白色</a>
+            <a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-left ui-alt-icon">黑色</a>
+        </p>
+    </div>
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+</body>
+</html>

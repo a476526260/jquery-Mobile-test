@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="reset.css" rel="stylesheet">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile 滚屏事件</title>
+</head>
+
+<body>
+<div data-role="page" id="pageone">
+	<div data-role="header">
+    	<h1>jQuery Mobile 滚屏事件</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+    	<p>Query Mobile 提供了两种滚屏事件：滚屏开始时触发和滚动结束时触发。</p>
+        <h3>jQuery Mobile 滚屏开始（Scrollstart）</h3>
+        <p>scrollstart 事件是在用户开始滚动页面时触发：</p>
+        <p>可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。</p>
+        <script>
+        	$(document).on("pagecreate","#pageone",function(){
+				$(document).scrollstart(function(){
+					alert("Begin Scroll");
+				})
+			})
+        </script>
+        
+        <h3>jQuery Mobile 滚屏结束（Scrollstop）</h3>
+        <p>scrollstop 事件是在用户停止滚动页面时触发：</p>
+        <p>可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。</p>
+        <script>
+        	$(document).on("pagecreate","#pageone",function(){
+				$(document).scrollstop(function(){
+					alert("End Scroll");
+				})
+			})
+        </script>
+    </div>
+    <div data-role="footer">
+    	<h1>Well Done!!</h1>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="reset.css" rel="stylesheet">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile 表单滑动条</title>
+</head>
+
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>表单滑动条</h1>
+    </div>
+    <div data-role="main">
+        <h3>jQuery Mobile 滑动条控件</h3>
+        <p>如需创建滑动条，请使用 &lt;input type="range"&gt;：</p>
+        <div>
+            <form action="" method="post">
+                <label for="points">进度：</label>
+                <input type="range" name="points" id="points" value="50" min="0" max="100" data-show-value="true">
+                <input type="submit" data-inline="true" value="提交">
+            </form>
+        </div>
+        <ul>
+        	<li>max - 规定允许的最大值</li>
+        	<li>min - 规定允许的最小值</li>
+        	<li>step - 规定合法的数字间隔</li>
+        	<li>value - 规定默认值</li>
+        </ul>
+        <p>提示: 如果你想在按钮中显示进度的值可以添加 data-show-value="true" 属性:</p>
+        <p>提示: 如果你想在滑动按钮上显示进度（类似一个小弹窗）可以使用 data-popup-enabled="true" 属性:</p>
+        <p>提示：如果您想要高亮突出显示滑动条的值，请添加 data-highlight="true"：</p>
+        
+        <h3>拨动开关</h3>
+        <p>我们可以使用 &lt;input type="checkbox"&gt; 元素并指定 data-role 为 "flipswitch" 来创建开关:</p>
+        <div>
+            <form action="" method="post">
+                <label for="switch">切换开关：</label>
+                <input type="checkbox" data-role="flipswitch" id="switch" name="switch">
+                <input type="submit" data-inline="true" value="提交">
+            </form>
+        </div>
+        <p>默认情况下，开关切换的文本为 "On" 和 "Off"。你可以使用 data-on-text 和 data-off-text 属性来修改它：</p>
+        <p>提示:开关复选框可以使用 "checked" 属性来设置默认的选项：</p>
+    </div>
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+</body>
+</html>

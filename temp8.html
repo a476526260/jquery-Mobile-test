@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile 工具栏</title>
+</head>
+
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">主页</a>
+        <h1>欢迎访问我的主页</h1>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left">搜索</a>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>welcome to my zone</p>
+        <p>注意我们在头部按钮上添加了  "ui-corner-all" 和 "ui-shadow" 类，使他看起来更美观点。</p>
+        <h6>头部栏一般包含页面标题/logo 或一两个按钮（通常是首页、选项或搜索）。您可以添加按钮到头部的左侧或右侧。</h6>
+        <h6>尾部栏比头部栏更灵活 - 在整个页面中它们更具功能性和可变性，因此可以包含尽可能多的按钮：</h6>
+        
+        <h2>定位头部栏和尾部栏</h2>
+        <p>头部和尾部可以通过三种方式进行定位：</p>
+        <ul>
+        	<li>Inline - 默认。头部栏和尾部栏与页面内容内联。<a href="#page2" class="ui-btn ui-corner-all">Inline</a></li>
+        	<li>Fixed - 头部栏和尾部栏固定在页面的顶部和底部。<a href="#page3" class="ui-btn ui-corner-all">Fixed</a></li>
+        	<li>Fullscreen - 与 Fixed 定位模式基本相同，头部栏和尾部栏固定在页面的顶部和底部。但是当他工具栏滚动出屏幕之外时，不会自动重新显示，除非点击屏幕，这对于图片或视频类有提升代入感的应用是非常有用的。注意这种模式下工具栏会遮住页面内容，所以最好用在比较特殊的场合下。<a href="#page4" class="ui-btn ui-corner-all">Fullscreen</a></li>
+        </ul>
+    </div>
+    <div data-role="footer" style="text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Facebook上关注我</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Twitter上关注我</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Instagram上关注我</a>
+        </div>
+    </div>
+</div>
+<div data-role="page" id="page2">
+    <div data-role="header" data-position="inline">
+        <h1>行内页眉</h1>
+    </div>
+    
+    <div data-role="main" class="ui-content">
+        <p><b>提示：</b> 如果要看到效果，则需要调整窗口大小使滚动条可用。</p>
+        <p>可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.</p>
+    </div>
+    <div data-role="footer" data-position="inline">
+     <h1>行内页脚</h1>
+  </div>
+</div>
+<div data-role="page" id="page3">
+    <div data-role="header" data-position="fixed">
+        <h1>固定页眉</h1>
+    </div>
+    
+    <div data-role="main" class="ui-content">
+        <p><b>提示：</b>如果要看到效果，则需要调整窗口大小使滚动条可用。</p>
+
+    <p><b>提示：</b> 如果滚动条可用，那么敲击屏幕将隐藏或显示页眉/页脚。效果会根据您在页面上的位置而变化。</p>
+    
+    <p>可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.</p>
+
+    </div>
+    <div data-role="footer" data-position="fixed">
+     <h1>固定页脚</h1>
+  </div>
+</div>
+<div data-role="page" id="page4">
+    <div data-role="header" data-position="fixed" data-fullscreen="true">
+        <h1>Fixed 和 Fullscreen 页眉</h1>
+    </div>
+    
+    <div data-role="main" class="ui-content">
+        <p><b>提示：</b>如果要看到效果，则需要调整窗口大小使滚动条可用。</p>
+
+        <p><b>提示：</b> 如果滚动条可用，那么敲击屏幕将隐藏或显示页眉/页脚。效果会根据您在页面上的位置而变化。</p>
+        
+        <p>可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.可滚动的文本.</p>
+
+    </div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+        <h1>Fixed 和 Fullscreen 页脚</h1>
+    </div>
+</div>
+
+</body>
+</html>

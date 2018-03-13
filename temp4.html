@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile 页面切换效果</title>
+</head>
+
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>点击链接查看淡入效果 (页面从右至左淡入)。</p>
+        <div class="allEffct">
+            <table width="100%" cellpadding="0" cellspacing="0" border="1">
+                <tr>
+                    <td>fade</td>
+                    <td>默认。淡入到下一页</td>
+                </tr>
+                <tr>
+                    <td>flip</td>
+                    <td>从后向前翻转到下一页</td>
+                </tr>
+                <tr>
+                    <td>flow</td>
+                    <td>抛出当前页，进入下一页</td>
+                </tr>
+                <tr>
+                    <td>pop</td>
+                    <td>像弹出窗口那样转到下一页。</td>
+                </tr>
+                <tr>
+                    <td>slide</td>
+                    <td>从右向左滑动到下一页。</td>
+                </tr>
+                <tr>
+                    <td>slidefade</td>
+                    <td>从右向左滑动并淡入到下一页</td>
+                </tr>
+                <tr>
+                    <td>slideup</td>
+                    <td>从下到上滑动到下一页。</td>
+                </tr>
+                <tr>
+                    <td>slidedown</td>
+                    <td>默认。淡入到下一页</td>
+                </tr>
+                <tr>
+                    <td>fade</td>
+                    <td>从上到下滑动到下一页。</td>
+                </tr>
+                <tr>
+                    <td>turn</td>
+                    <td>转向下一页。</td>
+                </tr>
+                <tr>
+                    <td>none</td>
+                    <td>无过渡效果。</td>
+                </tr>
+
+            </table>
+        </div>
+        <a href="#pagetwo" data-transition="slide">淡入第二个页面</a>
+    </div>
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>点击链接查看相反方向的淡入效果 (页面从左至右淡入)。</p>
+        <a href="#pageone" data-transition="slide" data-direction="reverse">淡入第一个页面</a>
+    </div>
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+</body>
+</html>

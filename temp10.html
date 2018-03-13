@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile 面板</title>
+</head>
+
+<body>
+<div data-role="page" id="page1">
+    <div data-role="header">
+        <h1>页面头部</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <h2>jQuery Mobile 中的面板会在屏幕的左侧向右侧划出。</h2>
+        <p>通过向指定 id 的 div 元素添加 data-role="panel" 属性来创建面板。</p>
+        <p><i style="color:#FC6D70;"> panel 标记必须置于头部、内容、底部组成的页面之前或之后。</i></p>
+        <p>要访问面板，需要创建一个指向面板 div id 的链接，点击该链接即可打开面板:</p>
+        <p>点击下面按钮打开面板。</p>
+        <h2>面板展示</h2>
+        <p>你可以通过使用 data-display 属性来控制面板的展示方式:</p>
+        
+        <div>
+            <table border="1">
+                <tr>
+                	<td>data-display="overlay"</td>
+                	<td>在内容上显示面板</td>
+                </tr>
+                <tr>
+                	<td>data-display="push"</td>
+                	<td>是同时"推动"面板和页面。</td>
+                </tr>
+                <tr>
+                	<td>data-display="reveal"</td>
+                	<td>默认值，将页面像幻灯片一样从屏幕划出，将面板显示出来</td>
+                </tr>
+            </table>
+        </div>
+        
+        <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">打开面板</a>
+        <a href="#page2" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">关闭面板</a>
+        
+        <h2>面板定位</h2>
+        <p>默认情况下，面板会显示在屏幕的左侧。如果想让面板出现在屏幕的右侧，可以指定 data-position="right" 属性。</p>
+        <p>你可以指定面板的内容根据页面滚动而滚动。默认情况下面板是随着页面一起滚动的（但是面板的内容仍然位于页面顶部）。如果你需要实现面板内容固定不随页面滚动而滚动，可以在面板添加 the data-position-fixed="true" 属性:</p>
+    </div>
+    <div data-role="footer">
+        <h1>页面底部</h1>
+    </div>
+    <div data-role="panel" id="myPanel" data-display="overlay" data-position="right">
+        <h2>面板头部</h2>
+        <p>你可以通过点击面板外部区域或按下 Esc 键或滑动来关闭面板。</p>
+    </div>
+</div>
+<div data-role="page" id="page2">
+    <div data-role="header">
+        <h1>关闭按钮</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>你可以通过点击面板外部区域或按下 Esc 键或滑动来关闭面板。你可以通过使用 data-* 属性来禁用滑动和点击来关闭面板：</p>
+        <div>
+            <table border="1">
+                <tr>
+                	<td>data-dismissible</td>
+                	<td>true | false</td>
+                    <td>指定面板是否可以通过点击面板外部区域来关闭。</td>
+                </tr>
+                <tr>
+                	<td>data-swipe-close</td>
+                	<td>true | false</td>
+                    <td>指定是否可以通过滑动来关闭。</td>
+                </tr>
+            </table>
+        </div>
+        <p>你可以使用按钮来关闭面板：仅需要在面板的 div 中添加 data-rel="close" 属性。 从性能上考虑，我们需要键关闭链接的<i style="color:#FF0004">href 属性指向页面的 ID 。</i></p>
+        <p><a href="#myPabel2" class="ui-btn ui-corner-all ui-shadow">打开面板</a></p>
+    </div>
+    <div data-role="footer">
+        <h1>页面底部</h1>
+    </div>
+    <div data-role="panel" id="myPabel2" data-dismissible="false" data-display="push">
+        <h2>面部头部</h2>
+        <p>面板设置了 data-dismissible 属性为 "false", 意味着不能通过点击面板外部区域来关闭，你可以使用按下 Esc 键或向左滑动来关闭。</p>
+        <a href="#page2" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a
+    </div>
+</div>
+</body>
+</html>

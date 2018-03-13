@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile 按钮</title>
+</head>
+
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>按钮</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>在 jQuery Mobile 中，按钮可通过三种方式创建：</p>
+        <ul>
+            <li>
+                <p>使用 button 元素</p>
+                <p><button class="ui-btn">按钮</button></p>
+            </li>
+            <li>
+                <p>使用 input 元素</p>
+                <p><input type="button" value="按钮" class="ui-btn"></p>
+            </li>
+            <li>
+                <p>使用带有 data-role="button" 的 a 元素</p>
+                <p><a href="#" data-role="button">按钮</a></p>
+                <a href="#pagetwo" class="ui-btn" data-role="button">访问第二个页面</a>
+            </li>
+        </ul>
+        
+        <h1>导航按钮</h1>
+        <p>如需通过按钮在页面间进行链接，请使用带有 data-role="button" 属性的 <a> 元素：</p>
+        <a href="#pagetwo" data-role="button">访问第二个页面</a>
+        
+        <h1>内联按钮</h1>
+        <p>默认情况下，按钮占满整个屏幕宽度。如果你想要一个仅是与内容一样宽的按钮，或者如果您想要并排显示两个或多个按钮，请添加 data-inline="true"：</p>
+        <a href="#pagetwo" data-role="button" data-inline="true" data-transition="flip">访问第二个页面</a>
+        
+        <h1>组合按钮</h1>
+        <p>jQuery Mobile 提供了一个简单的方法来将按钮组合在一起。</p>
+        <p>请把 data-role="controlgroup" 属性和 data-type="horizontal|vertical" 一起使用来规定是否水平或垂直组合按钮：</p>
+        <div data-role="controlgroup" data-type="horizontal">
+            <p>水平组合按钮:</p>
+            <a href="#" class="ui-btn" data-role="button">按钮 1</a>
+            <a href="#" class="ui-btn" data-role="button">按钮 2</a>
+            <a href="#" class="ui-btn" data-role="button">按钮 3</a>
+        </div>
+        <div data-role="controlgroup" data-type="vertical">
+            <p>垂直组合按钮 (默认):</p>
+            <a href="#" class="ui-btn" data-role="button">按钮 1</a>
+            <a href="#" class="ui-btn" data-role="button">按钮 2</a>
+            <a href="#" class="ui-btn" data-role="button">按钮 3</a>
+        </div>
+        <h1>后退按钮</h1>
+        <p>如需创建后退按钮，请使用 data-rel="back" 属性（这会忽略锚的 href 值）：</p>
+        <p><a href="#" data-role="button" data-rel="back">返回</a></p>
+        
+        <h1>更多链接按钮实例</h1>
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="1">
+                <tr>
+                	<td>ui-btn-b</td>
+                    <td>修改按钮颜色为黑色，字体为白色(默认为灰色背景，黑色字体)。</td>
+                </tr>
+                <tr>
+                	<td>ui-corner-all</td>
+                    <td>为按钮添加圆角</td>
+                </tr>
+                <tr>
+                	<td>ui-mini</td>
+                    <td>制作小按钮</td>
+                </tr>
+                <tr>
+                	<td>ui-shadow</td>
+                    <td>为按钮添加阴影</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <h1>按钮</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>再见!</p>
+    <a href="#pageone" data-role="button" data-transition="flip" data-direction="reverse">返回第一个页面</a>
+  </div>
+
+  <div data-role="footer">
+    <h1>底部文本</h1>
+  </div>
+</div> 
+</body>
+</html>

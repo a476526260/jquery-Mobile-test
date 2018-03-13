@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile 可折叠块</title>
+<style>
+h1,h2,h3,h4,h5,h6,p{ margin:0;}
+h3{ margin:50px 0 20px;}
+</style>
+</head>
+
+<body>
+<div data-role="page" id="page1">
+    <div data-role="header">
+        <h1>可折叠模块</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <h3><b style="color:#F70004;">可折叠块允许</b>您隐藏或显示内容 - 对于存储部分信息很有用。</h3>
+        <p>如需创建一个可折叠的内容块，需要为容器添加 data-role="collapsible" 属性。在容器（div）内，添加一个标题元素（H1-H6），后跟您想要进行扩展的 HTML 标记：</p>
+        <h6>例子</h6>
+        <div data-role="collapsible">
+            <h6>点击我----是可以折叠的</h6>
+            <p>我是被折叠的内容！！！</p>
+        </div>
+        <p>默认情况下，内容是被折叠起来的。如需在页面加载时展开内容，请使用 data-collapsed="false"：</p>
+        <h6>例子</h6>
+        <div data-role="collapsible" data-collapsed="false">
+            <h6>点击我----是可以折叠的</h6>
+            <p>我是被折叠的内容！！！</p>
+        </div>
+        <h3>嵌套可折叠内容</h3>
+        <h6>实例代码</h6>
+        <p style=" background:#ECFFD3;">&lt;div <span class="marked">data-role="collapsible"</span>&gt;<br>  &lt;h1&gt;点击我 - 我可以折叠!&lt;/h1&gt;<br>
+		  &lt;p&gt;我是被展开的内容。&lt;/p&gt;<br>  &lt;div 
+		<span class="marked">data-role="collapsible"</span>&gt;<br>    &lt;h1&gt;点击我 - 我是嵌套的可折叠块！&lt;/h1&gt;<br>    &lt;p&gt;我是嵌套的可折叠块中被展开的内容。&lt;/p&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;<br>
+</p>
+        <h6>例子</h6>
+        <div data-role="collapsible">
+            <h6>嵌套的可折叠内容</h6>
+            <p>这是折叠的内容</p>
+            <div data-role="collapsible" data-collapsed="false">
+                <h6>第二层嵌套</h6>
+                <p>第二层嵌套内容</p>
+            </div>
+        </div>
+        <h3>可折叠集合</h3>
+        <p>可折叠集合是将可折叠块组合在一起（就像手风琴一样）。当一个新的块被展开时，所有其他的块都会被折叠起来。</p>
+        <p>创建若干个可折叠的内容块，然后把可折叠内容块用带有 data-role="collapsible-set" 的新容器包围起来：</p>
+        <h6>实例代码</h6>
+        <p style=" background:#ECFFD3;">&lt;div <span class="marked">data-role="collapsible-set"</span>&gt;<br>  &lt;div 
+		data-role="collapsible"&gt;<br>    &lt;h1&gt;点击我 - 我可以折叠！&lt;/h1&gt;<br>    &lt;p&gt;我是被展开的内容。&lt;/p&gt;<br>  
+		&lt;/div&gt;<br>  &lt;div data-role="collapsible"&gt;<br>    
+		&lt;h1&gt;点击我 - 我可以折叠!&lt;/h1&gt;<br>    &lt;p&gt;我是被展开的内容。&lt;/p&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;<br>
+</p>
+        <h6>例子</h6>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible" data-iconpos="right" data-collapsed="false">
+                <h6>可折叠内容</h6>
+                <p>我是被折叠的内容</p>
+            </div>
+            <div data-role="collapsible" data-iconpos="right">
+                <h6>可折叠内容</h6>
+                <p>我是被折叠的内容</p>
+            </div>
+            <div data-role="collapsible" data-iconpos="right">
+                <h6>可折叠内容</h6>
+                <p>我是被折叠的内容</p>
+            </div>
+            <h3>其他信息</h3>
+            <p>通过 data-collapsed-icon 和 data-expanded-icon 改变图标</p>
+             <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+              <h1>data-collapsed-icon 规定按钮的图标。</h1>
+              <p>data-expanded-icon 规定内容被展开时按钮的图标。</p>
+            </div>
+            <p>通过 data-inset 属性取消圆角与外边距</p>
+            <p>通过 data-mini 属性迷你化可折叠块</p>
+        </div>
+    </div>
+    <div data-role="footer">
+        <h1>well done!!</h1>
+    </div>
+</div>
+</body>
+</html>

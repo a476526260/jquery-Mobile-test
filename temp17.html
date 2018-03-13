@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="reset.css" rel="stylesheet">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile 表单</title>
+<style>
+ul,li{ list-style:inside;}
+</style>
+</head>
+
+<body>
+<div data-role="page" id="page1">
+    <div data-role="header">
+        <h1>表单</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>jQuery Mobile 使用 CSS 为 HTML 表单元素添加样式，让它们更具吸引力，更易于使用。</p>
+        <p>在 jQuery Mobile 中，您可以使用下列表单控件：</p>
+        <ul style="list-style:inside">
+        	<li>文本输入框</li>
+        	<li>搜索输入框</li>
+        	<li>单选按钮</li>
+        	<li>复选框</li>
+        	<li>选择菜单</li>
+        	<li>滑动条</li>
+        	<li>翻转拨动开关</li>
+        </ul>
+        <p>当使用 jQuery Mobile 表单时，您应当知道：</p>
+        <ul>
+        	<li>form 元素必须有一个 method 和一个 action 属性</li>
+            <li>每个表单元素必须有一个唯一的 "id" 属性。id 必须是整个站点所有页面上唯一的。这是因为 jQuery Mobile 的单页导航机制使得多个不同页面在同一时间被呈现</li>
+            <li>每个表单元素必须有一个标签。设置标签的 for 属性来匹配元素的 id</li>
+        </ul>
+        <h6>例子</h6>
+        <div>
+            <form action="" method="post">
+                <label for="fname">姓名：</label>
+                <input type="text" name="fname" id="fname">
+            </form>
+        </div>
+        <p>如需隐藏标签，请使用 class ui-hidden-accessible。这在您把元素的 placeholder 属性作为标签时经常用到：</p>
+        <div>
+            <form action="" method="post">
+                <label for="fname1" class="ui-hidden-accessible">姓名：</label>
+                <input type="text" name="fname1" id="fname1" placeholder="姓名。。。">
+            </form>
+        </div>
+        <p>我们可以使用 data-clear-btn="true" 属性来添加清除输入框内容的按钮 (一个在输入框右侧的 X 图标):</p>
+        <div>
+            <form action="" method="post">
+                <label for="fname2">姓名：</label>
+                <input type="text" name="fname2" id="fname2" data-clear-btn="true">
+            </form>
+        </div>
+        <p><i style=" color:#FF0004;">清除输入框的按钮可以在 input 元素中使用，但不能在 textarea 中使用。 搜索框中 data-clear-btn 默认值为 "true" ，你可以使用 data-clear-btn="false" 移除该图标。</i></p>
+        
+        <h3>jQuery Mobile 表单图标</h3>
+        <p>表单中的按钮代码是标准的 HTML input 元素 (button, reset, submit)。他们会自动渲染样式，可以自动适配移动设备与桌面设备：</p>
+        <h6>代码实例</h6>
+        <p>&lt;input type="button" value="按钮"&gt;</p>
+        <p>&lt;input type="reset" value="重置按钮"&gt;</p>
+        <p>&lt;input type="submit" value="提交按钮"&gt;</p>
+        <p>如果需要在 <input> 按钮中添加额外的样式，可以使用下表中的 data-* 属性：</p>
+        <div>
+            <table border="1">
+                <tr>
+                	<td>属性</td>
+                	<td>值</td>
+                	<td>描述</td>
+                </tr>
+                <tr>
+                	<td>data-corners</td>
+                	<td>true | false</td>
+                	<td>指定按钮是否有圆角</td>
+                </tr>
+                <tr>
+                	<td>data-icon</td>
+                	<td>.....</td>
+                	<td>指定按钮图标</td>
+                </tr>
+                <tr>
+                	<td>data-iconpos</td>
+                	<td>left | right | top | bottom | notext</td>
+                	<td>指定图标位置</td>
+                </tr>
+                <tr>
+                	<td>data-inline</td>
+                	<td>true | false</td>
+                	<td>指定是否内联按钮</td>
+                </tr>
+                <tr>
+                	<td>data-mini</td>
+                	<td>.....</td>
+                	<td>指定是否为迷你按钮</td>
+                </tr>
+                <tr>
+                	<td>data-shadow</td>
+                	<td>true | false</td>
+                	<td>指定按钮是否添加阴影效果</td>
+                </tr>
+            </table>
+        </div>
+        
+        <h3>字段容器</h3>
+        <p>如需让标签和表单元素看起来更适应宽屏，请用带有 "ui-field-contain" 类的 div 或 fieldset 元素包围 label/form 元素：</p>
+        <div>
+            <form action="" method="post">
+                <div class="ui-field-contain">
+                    <label for="fname_l">姓：</label>
+                    <input type="text" name="fname_l" id="fname_l">
+                    <label for="lname_l">名：</label>
+                    <input type="text" name="lname_l" id="lname_l">
+                </div>
+                <input type="submit" data-inline="true" data-icon="check" value="提交">
+            </form>
+            <p> "ui-field-contain" 类 基于页面宽度来设置 label 和表单控件的样式。当页面宽度大于 480px 时，它会自动将 label 与表单控件放置于同一行。当小于 480px 时，label 会被放置于表单元素之上。</p>
+            <p>请尝试调整窗口的尺寸来查看效果。</p>
+            <p>为了防止 jQuery Mobile 为可点击元素自动添加样式，请使用 data-role="none" 属性：</p>
+        </div>
+    </div>
+    <div data-role="footer">
+        <h1>Well Done!!</h1>
+    </div>
+</div>
+</body>
+</html>

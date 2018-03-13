@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="reset.css" rel="stylesheet">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>jQuery Mobile 表单选择菜单</title>
+</head>
+
+<body>
+<div data-role="page" id="page1">
+    <div data-role="header">
+        <h1>表单选择菜单</h1>
+    </div>
+    <div data-role="main">
+        <h2>选择菜单</h2>
+        <p>select 元素创建带有若干选项的下拉列表。</p>
+        <p>select 元素内的 option 元素定义了列表中的可用选项：</p>
+        <div>
+            <form action="" method="post">
+                <fieldset class="ui-field-contain">
+                    <label for="day">Select Day</label>
+                    <select name="day" id="day">
+                        <option value="mon">Monday</option>
+                        <option value="tue">Tuesday</option>
+                        <option value="wed">Wednesday</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <p>提示：如果您有一个带有相关选项的很长的列表，请在 select 内使用 optgroup 元素：</p>
+        <div>
+            <form action="" method="post">
+                <fieldset class="ui-field-contain">
+                    <label for="day1">选择天</label>
+                    <select name="day" id="day1" data-native-menu="false">
+                        <optgroup label="Weekdays">
+                            <option value="mon">Monday</option>
+                            <option value="tue">Tuesday</option>
+                            <option value="wed">Wednesday</option>
+                        </optgroup>
+                        <optgroup label="Weekends">
+                            <option value="sat">Saturday</option>
+                            <option value="sun">Sunday</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        
+        <h3>自定义选择菜单</h3>
+        <p>本页顶部的图像，演示了移动平台上如何使用它们的方式展示一个选择菜单。</p>
+        <p>如果您想要让选择菜单在所有的移动设备上都显示相同，请使用 jQuery 自带的自定义选择菜单，data-native-menu="false" 属性：</p>
+        <h6>代码</h6>
+        <p>&lt;select name="day" id="day" data-native-menu="false"&gt;</p>
+        
+        <h3>多个选择</h3>
+        <p>如需在选择菜单中选择多个选项，请在 select 元素中使用 multiple 属性：</p>
+        <h6>代码</h6>
+        <p>&lt;select name="day" id="day" multiple data-native-menu="false"&gt;</p>
+    </div>
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+</body>
+</html>

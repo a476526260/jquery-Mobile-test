@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1{ margin:0;}
+h2{ margin:50px 0 20px;}
+h3{ margin:40px 0 15px;}
+h4{ margin:30px 0 10px;}
+h5{ margin:20px 0 5px;}
+h6{ margin:10px 0 0px;}
+p{ marign:0; background:#F4F8DA;}
+ul,li{ list-style:none;}
